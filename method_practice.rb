@@ -44,25 +44,30 @@
 
 #******************************************
 
-# # Create a method that converts an Array into a Hash
-# # (indexes become keys)
+# Create a method that converts an Array into a Hash
+# (indexes become keys)
 
-# def array_to_hash(array)
-# 	my_hash = {}
+def array_to_hash(array)
+	my_hash = {}
 
-# 	array.each_with_index do |a,i|
-# 		my_hash[i] = a
-# 	end
+	array.each_with_index do |a,i|
+		my_hash[i] = a
+	end
 
-# 	return my_hash
+	return my_hash
 	
-# end		
+end		
 
 
-# fruit = ["apples", "oranges", "banana", "peaches", "grapes"]
+fruit = ["apples", "oranges", "banana", "peaches", "grapes"]
 
-# puts "Our new hash is #{array_to_hash(fruit)}"
+new_hash = array_to_hash(fruit)
 
+
+new_hash.each do |q,a|
+	puts "The answer for key #{q} is #{a}"
+
+end	
 #******************************************************
 # Write a program that asks for two (2) Integers, divides the first by the second and returns the result including the remainder. If either of the numbers is not an Integer, then don't accept the number and ask again.
 
@@ -70,32 +75,32 @@
 
 
 
-def get_number
-	puts "Give me a number (not zero):"
-	number = gets.chomp.to_i
+# def get_number
+# 	puts "Give me a number (not zero):"
+# 	number = gets.chomp.to_i
 
-	if number == 0
-		puts "Please provide a valid input!"
-		get_number
-	else
-		return number	
-	end	
-end
+# 	if number == 0
+# 		puts "Please provide a valid input!"
+# 		get_number
+# 	else
+# 		return number	
+# 	end	
+# end
 
 
-def get_remainder(num1, num2)
+# def get_remainder(num1, num2)
 
-	if num1%num2 == 0
-		puts "#{num2} is divisible into #{num1} evenly, and the quotient is #{num1/num2}"
-	else
-		puts "#{num1} divided by #{num2} is #{num1/num2}, with a remainder of #{num1%num2}."
-	end		
+# 	if num1%num2 == 0
+# 		puts "#{num2} is divisible into #{num1} evenly, and the quotient is #{num1/num2}"
+# 	else
+# 		puts "#{num1} divided by #{num2} is #{num1/num2}, with a remainder of #{num1%num2}."
+# 	end		
 
-end	
+# end	
 
-#main program
-user_num1 = get_number
-user_num2 = get_number
+# #main program
+# user_num1 = get_number
+# user_num2 = get_number
 
-get_remainder(user_num1, user_num2)
+# get_remainder(user_num1, user_num2)
 
